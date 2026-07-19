@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
 import Container from "@/app/components/UI/container";
+import { profile } from '@/data/Profile'
+
 
 export default function Hero() {
   return (
@@ -31,7 +33,7 @@ export default function Hero() {
               <br />
 
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Saad Ali
+                {profile.name}
               </span>
             </h1>
 
