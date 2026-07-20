@@ -1,31 +1,51 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/lib/motion";
+
 type Props = {
-  badge?: string;
+  eyebrow?: string;
   title: string;
   description?: string;
 };
 
 export default function SectionHeading({
-  badge,
+  eyebrow,
   title,
   description,
 }: Props) {
   return (
-    <div className="max-w-3xl mb-16">
-      {badge && (
-        <div className="badge badge-primary mb-4">
-          {badge}
-        </div>
+    <motion.div
+      className="mb-16 max-w-3xl"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={staggerContainer}
+    >
+      {eyebrow && (
+        <motion.p
+          variants={fadeUp}
+          className="text-sm font-semibold uppercase tracking-[0.25em] text-primary"
+        >
+          {eyebrow}
+        </motion.p>
       )}
 
-      <h2 className="text-4xl lg:text-5xl font-bold">
+      <motion.h2
+        variants={fadeUp}
+        className="mt-4 text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl"
+      >
         {title}
-      </h2>
+      </motion.h2>
 
       {description && (
-        <p className="mt-4 text-lg text-base-content/70">
+        <motion.p
+          variants={fadeUp}
+          className="mt-6 text-base leading-relaxed text-base-content/70 md:text-lg"
+        >
           {description}
-        </p>
+        </motion.p>
       )}
-    </div>
+    </motion.div>
   );
 }

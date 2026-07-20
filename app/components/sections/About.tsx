@@ -26,7 +26,7 @@ export default function About() {
           <div className="flex justify-center">
             <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-base-300">
               <Image
-                src="/about.jpg"
+                src="/saaddesc.png"
                 alt="Saad Ali"
                 fill
                 className="object-cover"

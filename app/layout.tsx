@@ -1,9 +1,8 @@
-
 import Navbar from "@/app/components/layout/Navbar";
+import Footer from "@/app/components/layout/footer";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import "./globals.css";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -20,13 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="portfolio">
       <body className={geist.className}>
-        <Navbar/>
-
+        <Navbar />
         {children}
-        
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }
