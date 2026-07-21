@@ -35,11 +35,11 @@ export default function Navbar() {
             </ul>
           </div>
 
-          <div className="navbar-end">
+           {/* <div className="navbar-end">
             <a href="/resume.pdf" className="btn btn-primary">
               Resume
-            </a>
-          </div>
+            </a> 
+          </div>  */}
         </div>
       </Container>
     </header>

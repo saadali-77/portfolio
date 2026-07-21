@@ -55,9 +55,9 @@ export default function About() {
               ))}
             </div>
 
-            <button className="btn btn-primary mt-10">
+            {/* <button className="btn btn-primary mt-10">
               Download Resume
-            </button>
+            </button> */}
           </div>
         </div>
       </Container>
