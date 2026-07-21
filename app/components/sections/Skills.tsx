@@ -8,7 +8,7 @@ export default function Skills() {
     <Section id="skills">
       <Container>
         <SectionHeading
-          badge="Skills"
+          eyebrow="Skills"
           title="Technologies I Work With"
           description="A collection of the tools and technologies I use to build modern, scalable web applications."
         />

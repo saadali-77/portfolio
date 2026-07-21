@@ -16,7 +16,7 @@ export default function About() {
     <Section id="about">
       <Container>
         <SectionHeading
-          badge="About"
+          eyebrow="About"
           title="Building modern web experiences."
           description="I enjoy creating fast, scalable, and user-friendly web applications with modern technologies."
         />
