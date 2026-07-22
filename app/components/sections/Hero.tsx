@@ -78,7 +78,7 @@ export default function Hero() {
             {/* Social Links */}
             <div className="mt-10 flex gap-6 text-2xl">
               <Link
-                href="https://github.com/yourusername"
+                href="https://github."
                 target="_blank"
                 aria-label="GitHub"
                 className="transition-all duration-300 hover:scale-110 hover:text-primary"
@@ -94,7 +94,7 @@ export default function Hero() {
                 <FaLinkedin />
               </Link>
               <Link
-                href="mailto:your@email.com"
+                href="mailto:saadali6991550@email.com"
                 aria-label="Email"
                 className="transition-all duration-300 hover:scale-110 hover:text-primary"
               >
