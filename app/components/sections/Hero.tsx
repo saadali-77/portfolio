@@ -86,7 +86,7 @@ export default function Hero() {
                 <FaGithub />
               </Link>
               <Link
-                href="https://linkedin.com/in/yourusername"
+                href="www.linkedin.com/in/saadali77"
                 target="_blank"
                 aria-label="LinkedIn"
                 className="transition-all duration-300 hover:scale-110 hover:text-primary"
