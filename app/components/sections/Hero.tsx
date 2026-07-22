@@ -78,7 +78,7 @@ export default function Hero() {
             {/* Social Links */}
             <div className="mt-10 flex gap-6 text-2xl">
               <Link
-                href="https://github."
+                href="https://github.com/saadali-77"
                 target="_blank"
                 aria-label="GitHub"
                 className="transition-all duration-300 hover:scale-110 hover:text-primary"
