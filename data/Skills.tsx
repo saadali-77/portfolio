@@ -21,6 +21,8 @@ import {
   SiDocker,
   SiPostman,
   SiVercel,
+  SiSqlite,
+  SiPostgresql,
 } from "react-icons/si";
 
 import { SkillCategory } from "@/types/skills";
@@ -70,6 +72,9 @@ export const skills: SkillCategory[] = [
         name: "Express.js",
         icon: SiExpress,
       },
+      
+      
+
     ],
   },
 
@@ -82,9 +87,17 @@ export const skills: SkillCategory[] = [
         icon: SiMongodb,
       },
       {
-        name: "Prisma",
+        name: 'MySQL',
         icon: SiPrisma,
       },
+      {
+        name: "Sqlite",
+        icon: SiSqlite,
+      },
+      {
+        name: "PostgreSQL",
+        icon: SiPostgresql,
+      }
     ],
   },
 

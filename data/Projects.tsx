@@ -1,8 +1,31 @@
 import { Project } from "@/Type/project";
 
 export const projects: Project[] = [
-  {
+  { 
     id: 1,
+    title: "GreenMart - Full Stack Grocery Store",
+    description:
+      "A modern full-stack grocery e-commerce application with authentication, shopping cart, checkout, order management, and an admin dashboard for managing products and orders.",
+    image: "/projects/greenmart.jpg", // Add a screenshot here
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "Redux Toolkit",
+      "JWT",
+      "Vercel",
+    ],
+    github: {
+      frontend: "https://github.com/saadali-77/greenmart"
+    },
+    live: "https://greenmart-pi.vercel.app",
+    featured: true,
+  },
+  {
+    id: 2,
     title: "DevTinder",
     description:
       "A full-stack MERN developer networking platform featuring JWT authentication, connection requests, profile management, and a responsive UI.",
@@ -24,7 +47,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 2,
+    id: 3,
     title: "Todo App",
     description:
       "A full-stack task management application with complete CRUD functionality and a responsive user interface.",
