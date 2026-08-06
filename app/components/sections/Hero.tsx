@@ -55,7 +55,7 @@ export default function Hero() {
   </Link>
 
   <a
-    href="/saadresume.pdf"
+    href="/saadres.pdf"
     download
     className="btn border border-indigo-400/30 bg-white/5 text-indigo-300 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-indigo-400 hover:bg-indigo-500/10 hover:text-white hover:shadow-lg hover:shadow-indigo-500/30"
   >
@@ -63,7 +63,36 @@ export default function Hero() {
   </a>
 </div>
 
+{/* Social Links */}
+<div className="mt-10 flex gap-6 text-2xl">
+  <Link
+    href="https://github.com/saadali-77"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub"
+    className="transition-all duration-300 hover:scale-110 hover:text-primary"
+  >
+    <FaGithub />
+  </Link>
 
+  <Link
+    href="https://www.linkedin.com/in/saadali77"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    className="transition-all duration-300 hover:scale-110 hover:text-primary"
+  >
+    <FaLinkedin />
+  </Link>
+
+  <Link
+    href="mailto:Saadali6991550@gmail.com"
+    aria-label="Email"
+    className="transition-all duration-300 hover:scale-110 hover:text-primary"
+  >
+    <FaEnvelope />
+  </Link>
+</div>
 
 
            
@@ -75,32 +104,7 @@ export default function Hero() {
 
 
 
-            {/* Social Links */}
-            <div className="mt-10 flex gap-6 text-2xl">
-              <Link
-                href="https://github.com/yourusername"
-                target="_blank"
-                aria-label="GitHub"
-                className="transition-all duration-300 hover:scale-110 hover:text-primary"
-              >
-                <FaGithub />
-              </Link>
-              <Link
-                href="https://linkedin.com/in/yourusername"
-                target="_blank"
-                aria-label="LinkedIn"
-                className="transition-all duration-300 hover:scale-110 hover:text-primary"
-              >
-                <FaLinkedin />
-              </Link>
-              <Link
-                href="mailto:your@email.com"
-                aria-label="Email"
-                className="transition-all duration-300 hover:scale-110 hover:text-primary"
-              >
-                <FaEnvelope />
-              </Link>
-            </div>
+           
           </motion.div>
 
           {/* Right Content */}
