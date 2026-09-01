@@ -1,5 +1,9 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { projects } from "@/data/Projects";
 import ProjectCard from "./ProjectCard";
+import { fadeUp, staggerContainer } from "@/lib/motion";
 
 export default function Projects() {
   const featuredProjects = projects.filter(
@@ -11,24 +15,39 @@ export default function Projects() {
   );
 
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="relative py-24">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
-        <div className="mb-16 max-w-2xl">
-          <p className="text-primary font-semibold uppercase tracking-widest">
-            Portfolio
-          </p>
+        <motion.div
+          className="mb-16 max-w-2xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={staggerContainer}
+        >
+          <motion.div variants={fadeUp} className="flex items-center gap-3">
+            <span className="h-px w-8 bg-gradient-to-r from-primary to-accent" />
+            <p className="text-primary font-semibold uppercase tracking-widest">
+              Portfolio
+            </p>
+          </motion.div>
 
-          <h2 className="mt-3 text-4xl font-bold md:text-5xl">
+          <motion.h2
+            variants={fadeUp}
+            className="mt-3 text-4xl font-bold md:text-5xl"
+          >
             Featured Projects
-          </h2>
+          </motion.h2>
 
-          <p className="mt-6 leading-relaxed text-base-content/70">
+          <motion.p
+            variants={fadeUp}
+            className="mt-6 leading-relaxed text-base-content/70"
+          >
             A collection of full-stack applications built with modern
             technologies including React, Next.js, Node.js, Express,
             MongoDB, PostgreSQL, Prisma, and TypeScript.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Featured Projects */}
         <div className="space-y-16">

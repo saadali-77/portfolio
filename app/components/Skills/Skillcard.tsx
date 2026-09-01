@@ -11,22 +11,22 @@ export default function SkillCard({ category }: Props) {
   return (
     <div
       className="
+        glass glow-border
+        group
         card
-        bg-base-200
-        border
-        border-base-300
-        shadow-sm
+        rounded-3xl
         transition-all
-        duration-300
+        duration-500
         hover:-translate-y-2
-        hover:shadow-xl
+        hover:shadow-2xl
+        hover:shadow-primary/10
       "
     >
       <div className="card-body">
-        
+
         {/* Header */}
         <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 transition-transform duration-300 group-hover:scale-110">
             <Icon className="h-6 w-6 text-primary" />
           </div>
 

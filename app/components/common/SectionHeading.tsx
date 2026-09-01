@@ -23,12 +23,12 @@ export default function SectionHeading({
       variants={staggerContainer}
     >
       {eyebrow && (
-        <motion.p
-          variants={fadeUp}
-          className="text-sm font-semibold uppercase tracking-[0.25em] text-primary"
-        >
-          {eyebrow}
-        </motion.p>
+        <motion.div variants={fadeUp} className="flex items-center gap-3">
+          <span className="h-px w-8 bg-gradient-to-r from-primary to-accent" />
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+            {eyebrow}
+          </p>
+        </motion.div>
       )}
 
       <motion.h2

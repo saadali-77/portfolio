@@ -17,12 +17,19 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 transition-all duration-500 ease-out ${
         scrolled
-          ? "border-b border-base-300 bg-base-100/95 shadow-sm backdrop-blur-md"
+          ? "glass shadow-[0_1px_0_0_rgba(255,255,255,0.06)]"
           : "border-b border-transparent bg-transparent"
       }`}
     >
+      {/* subtle animated top accent line, only visible once scrolled */}
+      <div
+        className={`h-px w-full bg-gradient-to-r from-transparent via-primary/70 to-transparent transition-opacity duration-500 ${
+          scrolled ? "opacity-100" : "opacity-0"
+        }`}
+      />
+
       <Container>
         <div className="navbar px-0">
           <div className="navbar-start">
@@ -30,7 +37,7 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal gap-2 px-1">
+            <ul className="menu menu-horizontal gap-1 px-1">
               <NavLinks />
             </ul>
           </div>
@@ -38,7 +45,7 @@ export default function Navbar() {
            {/* <div className="navbar-end">
             <a href="/resume.pdf" className="btn btn-primary">
               Resume
-            </a> 
+            </a>
           </div>  */}
         </div>
       </Container>

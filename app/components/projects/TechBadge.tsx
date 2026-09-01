@@ -17,7 +17,9 @@ export default function TechBadge({ label }: TechBadgeProps) {
         backdrop-blur-sm
         transition-all
         duration-300
-        hover:border-primary
+        hover:-translate-y-0.5
+        hover:border-primary/60
+        hover:bg-primary/10
         hover:text-primary
       "
     >
