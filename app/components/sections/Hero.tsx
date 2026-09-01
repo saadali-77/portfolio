@@ -52,9 +52,8 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-6 max-w-xl text-lg leading-8 text-base-content/70"
             >
-              MERN Stack Developer specializing in React, Next.js, Node.js,
-              Express.js and MongoDB. I build fast, scalable and
-              user-friendly web applications.
+              Full Stack Developer with expertise in the MERN stack (MongoDB, Express.js, React, Node.js) and Next.js. I build fast, scalable, and user-friendly web applications end-to-end — from responsive front-end interfaces to robust, well-structured APIs. Passionate about writing clean code and delivering products that balance performance with great user experience.
+             
             </motion.p>
 
             {/* Buttons */}
