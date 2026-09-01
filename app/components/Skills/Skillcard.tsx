@@ -15,9 +15,10 @@ export default function SkillCard({ category }: Props) {
         group
         card
         rounded-3xl
-        transition-all
-        duration-500
-        hover:-translate-y-2
+        transition-[transform,box-shadow]
+        duration-300
+        ease-out
+        hover:-translate-y-1
         hover:shadow-2xl
         hover:shadow-primary/10
       "

@@ -14,7 +14,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`relative py-24 lg:py-32 ${
+      className={`relative scroll-mt-24 py-24 lg:py-32 ${
         alternate
           ? "bg-gradient-to-b from-base-200/60 via-base-200/30 to-transparent"
           : ""

@@ -6,7 +6,7 @@ import Container from "@/app/components/UI/container";
 import Section from "@/app/components/common/Section";
 import SectionHeading from "@/app/components/common/SectionHeading";
 import { CheckCircle2 } from "lucide-react";
-import { fadeUp, slideInLeft, staggerContainer } from "@/lib/motion";
+import { fadeUp, slideInLeft, staggerContainer, viewportOnce } from "@/lib/motion";
 
 const highlights = [
   "2+ Years of Development Experience",
@@ -38,7 +38,7 @@ export default function About() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={viewportOnce}
             variants={slideInLeft}
             className="flex justify-center"
           >
@@ -59,7 +59,7 @@ export default function About() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={viewportOnce}
             variants={staggerContainer}
           >
             <motion.h3 variants={fadeUp} className="text-3xl font-bold">

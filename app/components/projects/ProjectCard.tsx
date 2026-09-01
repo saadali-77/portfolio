@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ExternalLink, Code2, Sparkles } from "lucide-react";
 import { Project } from "@/Type/project";
+import { fadeUp, EASE_OUT } from "@/lib/motion";
 import TechBadge from "./TechBadge";
 
 type Props = {
@@ -18,11 +19,8 @@ export default function ProjectCard({
 }: Props) {
   return (
     <motion.article
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -8 }}
+      variants={fadeUp}
+      whileHover={{ y: -6, transition: { duration: 0.3, ease: EASE_OUT } }}
       className="
         glass glow-border
         group

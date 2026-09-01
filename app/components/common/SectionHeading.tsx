@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
 
 type Props = {
   eyebrow?: string;
@@ -19,7 +19,7 @@ export default function SectionHeading({
       className="mb-16 max-w-3xl"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={viewportOnce}
       variants={staggerContainer}
     >
       {eyebrow && (

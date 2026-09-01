@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Container from "@/app/components/UI/container";
 import { profile } from "@/data/Profile";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import { fadeUp, scaleIn, staggerContainer } from "@/lib/motion";
 
 export default function Hero() {
   return (
@@ -121,9 +121,10 @@ export default function Hero() {
 
           {/* Right Content */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            initial="hidden"
+            animate="visible"
+            variants={scaleIn}
+            transition={{ delay: 0.15 }}
             className="flex justify-center"
           >
             <div className="animate-float relative">

@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Logo from "./Logo";
 import NavLinks from "./Navlinks";
 import Container from "../UI/container";
+import { EASE_OUT } from "@/lib/motion";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,8 +18,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-500 ease-out ${
+    <motion.header
+      initial={{ y: -24, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: EASE_OUT }}
+      className={`sticky top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ease-out ${
         scrolled
           ? "glass shadow-[0_1px_0_0_rgba(255,255,255,0.06)]"
           : "border-b border-transparent bg-transparent"
@@ -49,6 +54,6 @@ export default function Navbar() {
           </div>  */}
         </div>
       </Container>
-    </header>
+    </motion.header>
   );
 }

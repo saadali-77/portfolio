@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { projects } from "@/data/Projects";
 import ProjectCard from "./ProjectCard";
-import { fadeUp, staggerContainer } from "@/lib/motion";
+import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
 
 export default function Projects() {
   const featuredProjects = projects.filter(
@@ -15,14 +15,14 @@ export default function Projects() {
   );
 
   return (
-    <section id="projects" className="relative py-24">
+    <section id="projects" className="relative scroll-mt-24 py-24">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <motion.div
           className="mb-16 max-w-2xl"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={viewportOnce}
           variants={staggerContainer}
         >
           <motion.div variants={fadeUp} className="flex items-center gap-3">
@@ -50,7 +50,13 @@ export default function Projects() {
         </motion.div>
 
         {/* Featured Projects */}
-        <div className="space-y-16">
+        <motion.div
+          className="space-y-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={staggerContainer}
+        >
           {featuredProjects.map((project) => (
             <ProjectCard
               key={project.id}
@@ -58,7 +64,7 @@ export default function Projects() {
               featured
             />
           ))}
-        </div>
+        </motion.div>
 
         {/* Other Projects */}
         {otherProjects.length > 0 && (
@@ -67,14 +73,20 @@ export default function Projects() {
               More Projects
             </h3>
 
-            <div className="grid gap-8 md:grid-cols-2">
+            <motion.div
+              className="grid gap-8 md:grid-cols-2"
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
+              variants={staggerContainer}
+            >
               {otherProjects.map((project) => (
                 <ProjectCard
                   key={project.id}
                   project={project}
                 />
               ))}
-            </div>
+            </motion.div>
           </>
         )}
       </div>
