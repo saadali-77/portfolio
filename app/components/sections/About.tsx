@@ -13,18 +13,11 @@ const highlights = [
   "Built Full-Stack MERN Applications",
   "Next.js & TypeScript Enthusiast",
   "Strong Problem-Solving Skills",
-  "RESTful API Design & Development",
-  "Responsive & Mobile-First UI Development",
-  "State Management with Redux / Context API",
-  "Database Design with MongoDB & Mongoose",
+  "Database Design with MongoDB & MYSQL",
   "Authentication & Authorization (JWT, OAuth)",
   "Version Control with Git & GitHub",
   "Cloud Deployment (Vercel, AWS)",
-  "Agile & Collaborative Development",
-  "Performance Optimization & Clean Code Practices",
-  "API Integration & Third-Party Services",
-  "UI/UX Focused Development",
-  "Continuous Learner, Always Exploring New Tech",
+  
 
 
 
